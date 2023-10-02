@@ -1,0 +1,26 @@
+diff --git a/src/Directory.Build.props b/src/Directory.Build.props
+index 8d10c9f..6eb0f42 100644
+--- a/src/Directory.Build.props
++++ b/src/Directory.Build.props
+@@ -7,7 +7,7 @@
+     <DebugType>embedded</DebugType>
+     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+     <GitVersionBaseDirectory>$(MSBuildThisFileDirectory)</GitVersionBaseDirectory>
+-    <!--<DisableGitVersionTask>true</DisableGitVersionTask>-->
++    <DisableGitVersionTask>true</DisableGitVersionTask>
+     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+   </PropertyGroup>
+ 
+diff --git a/src/Recyclarr.Cli/Program.cs b/src/Recyclarr.Cli/Program.cs
+index fa4a915..f7e5ce1 100644
+--- a/src/Recyclarr.Cli/Program.cs
++++ b/src/Recyclarr.Cli/Program.cs
+@@ -78,7 +78,7 @@ internal static class Program
+         }
+ 
+         _log = _scope.Resolve<ILogger>();
+-        _log.Debug("Recyclarr Version: {Version}", GitVersionInformation.InformationalVersion);
++        _log.Debug("Recyclarr Version: {Version}", "6.0.0");
+ 
+         _tasks = _scope.Resolve<IOrderedEnumerable<IBaseCommandSetupTask>>().ToArray();
+         _tasks.ForEach(x => x.OnStart());
