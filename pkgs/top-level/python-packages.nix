@@ -4687,6 +4687,8 @@ self: super: with self; {
 
   gpytorch = callPackage ../development/python-modules/gpytorch { };
 
+  gpt4all = callPackage ./development/python-modules/gpt4all { };
+
   gpt-2-simple = callPackage ../development/python-modules/gpt-2-simple { };
 
   gptcache = callPackage ../development/python-modules/gptcache { };
@@ -6361,6 +6363,8 @@ self: super: with self; {
   llm = callPackage ../development/python-modules/llm { };
   llm-clip = callPackage ../development/python-modules/llm-clip { };
   llm-cluster = callPackage ../development/python-modules/llm-cluster { };
+  llm-gpt4all = callPackage ../development/python-modules/llm-gpt4all { };
+  llm-sentence-transformers = callPackage ../development/python-modules/llm-sentence-transformers { };
 
   llvmlite = callPackage ../development/python-modules/llvmlite {
     # llvmlite always requires a specific version of llvm.
