@@ -6360,6 +6360,7 @@ self: super: with self; {
 
   llm = callPackage ../development/python-modules/llm { };
   llm-clip = callPackage ../development/python-modules/llm-clip { };
+  llm-cluster = callPackage ../development/python-modules/llm-cluster { };
 
   llvmlite = callPackage ../development/python-modules/llvmlite {
     # llvmlite always requires a specific version of llvm.
