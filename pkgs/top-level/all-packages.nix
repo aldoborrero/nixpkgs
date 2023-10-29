@@ -9963,6 +9963,8 @@ with pkgs;
 
   lldpd = callPackage ../tools/networking/lldpd { };
 
+  llm = with python3Packages; toPythonApplication llm;
+
   lnav = callPackage ../tools/misc/lnav { };
 
   lnch = callPackage ../tools/misc/lnch { };
